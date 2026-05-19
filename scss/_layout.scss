@@ -1,0 +1,290 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img{
+    max-width: 100%;
+    display: block;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+
+    background-color: $color-primario;
+    font-family: $fuente-texto;
+}
+
+h1,h2,h3{
+    font-family: $fuente-titulos;
+}
+
+
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    background-color: $color-secundario;
+    color: $color-primario;
+
+    padding: 20px 60px;
+}
+
+nav ul{
+    display: flex;
+    gap: 30px;
+
+    list-style: none;
+}
+
+nav a{
+    text-decoration: none;
+    color: $color-primario;
+
+    font-family: $fuente-texto;
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+nav a:hover{
+    color: $color-terciario;
+}
+
+
+
+.hero{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: $color-terciario;
+    color: $color-primario;
+
+    padding: 40px;
+    text-align: center;
+}
+
+.hero img{
+    width: 100%;
+    max-height: 500px;
+
+    object-fit: cover;
+
+    border-radius: 20px;
+}
+
+
+
+.contenedor{
+    padding: 40px;
+    flex: 1;
+}
+
+.contenedor h2{
+    color: $color-secundario;
+    margin-bottom: 20px;
+}
+
+
+
+.grid-planes{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 20px;
+}
+
+.grid-entrenadores{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 20px;
+}
+
+
+
+.card{
+    display: flex;
+    flex-direction: column;
+
+    background-color: $color-terciario;
+
+    padding: 20px;
+    border-radius: 15px;
+
+    text-align: center;
+
+    width: 100%;
+}
+
+.card img{
+    width: 100%;
+    height: 250px;
+
+    object-fit: cover;
+
+    border-radius: 15px;
+
+    margin-bottom: 15px;
+}
+
+.card h3{
+    color: $color-secundario;
+    font-family: $fuente-texto;
+
+    margin-bottom: 10px;
+}
+
+.card p{
+    color: $color-primario;
+    font-size: 14px;
+
+    margin-bottom: 15px;
+}
+
+.card button{
+    @include boton;
+}
+
+
+
+.footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    background-color: $color-secundario;
+    color: $color-primario;
+
+    padding: 20px 40px;
+
+    margin-top: 40px;
+
+    gap: 30px;
+}
+
+.footer ul{
+    display: flex;
+    gap: 20px;
+
+    list-style: none;
+}
+
+.footer a{
+    text-decoration: none;
+    color: $color-primario;
+}
+
+
+/* TABLET */
+
+@media (max-width: 992px){
+
+    .grid-planes{
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .grid-entrenadores{
+        grid-template-columns: 1fr;
+    }
+
+    .header{
+        padding: 20px;
+    }
+
+}
+
+/* MOBILE */
+
+@media (max-width: 768px){
+
+    .header{
+        flex-direction: column;
+        gap: 20px;
+
+        text-align: center;
+    }
+
+    nav ul{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .hero{
+        padding: 20px;
+    }
+
+    .hero h1{
+        font-size: 32px;
+    }
+
+    .contenedor{
+        padding: 20px;
+    }
+
+    .grid-planes{
+        grid-template-columns: 1fr;
+    }
+
+    .grid-entrenadores{
+        grid-template-columns: 1fr;
+    }
+
+    .footer{
+        flex-direction: column;
+        gap: 20px;
+
+        text-align: center;
+    }
+
+    .footer ul{
+        flex-direction: column;
+    }
+
+}
+
+.socials{
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.socials a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 45px;
+    height: 45px;
+
+    border-radius: 50%;
+
+    background-color: rgba(255,255,255,0.1);
+
+    color: $color-primario;
+
+    font-size: 22px;
+
+    transition: 0.3s;
+
+    text-decoration: none;
+}
+
+.socials a:hover{
+    transform: scale(1.1);
+    background-color: $color-terciario;
+}
+
+@media (min-width: 1200px){
+
+    .footer{
+        gap: 1200px;
+    }
+
+}
