@@ -134,17 +134,12 @@ nav a:hover {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
   background-color: #5c6e58;
   color: #f6f2e7;
   padding: 20px 40px;
   margin-top: 40px;
-  gap: 30px;
-}
-
-.footer ul {
-  display: flex;
   gap: 20px;
-  list-style: none;
 }
 
 .footer a {
@@ -152,19 +147,43 @@ nav a:hover {
   color: #f6f2e7;
 }
 
-/* TABLET */
+.socials {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.socials a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #f6f2e7;
+  font-size: 22px;
+  transition: 0.3s;
+  text-decoration: none;
+}
+
+.socials a:hover {
+  transform: scale(1.1);
+  background-color: #D4b586;
+}
+
 @media (max-width: 992px) {
+  .header {
+    padding: 20px;
+  }
   .grid-planes {
     grid-template-columns: repeat(2, 1fr);
   }
   .grid-entrenadores {
     grid-template-columns: 1fr;
   }
-  .header {
-    padding: 20px;
-  }
 }
-/* MOBILE */
 @media (max-width: 768px) {
   .header {
     flex-direction: column;
@@ -192,41 +211,12 @@ nav a:hover {
   }
   .footer {
     flex-direction: column;
-    gap: 20px;
+    justify-content: center;
     text-align: center;
+    padding: 20px;
   }
-  .footer ul {
-    flex-direction: column;
-  }
-}
-.socials {
-  display: flex;
-  gap: 20px;
-  align-items: center;
-}
-
-.socials a {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 45px;
-  height: 45px;
-  border-radius: 50%;
-  background-color: rgba(255, 255, 255, 0.1);
-  color: #f6f2e7;
-  font-size: 22px;
-  transition: 0.3s;
-  text-decoration: none;
-}
-
-.socials a:hover {
-  transform: scale(1.1);
-  background-color: #D4b586;
-}
-
-@media (min-width: 1200px) {
-  .footer {
-    gap: 1200px;
+  .socials {
+    justify-content: center;
   }
 }
 
